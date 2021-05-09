@@ -1,0 +1,96 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-blue: hsl(229, 23%, 23%);
+    --gray-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+    --font-size: 18px;
+
+    --font: 'Kumbh Sans';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+    background: var(--dark-cyan);
+    background-image: url('/images/bg-pattern-top.svg'), url('/images/bg-pattern-bottom.svg');
+    background-position: top -500px left -300px, bottom -500px right -250px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.card {
+    width: 350px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-header {
+    background-image: url('/images/bg-pattern-card.svg');
+}
+
+.card>img {
+    position: absolute;
+    top: 25%;
+    left: 38%;
+    margin: 0 auto;
+    border-radius: 50%;
+    max-width: 90px;
+    border: solid 5px white;
+    /* transform: translateY(-50%); */
+}
+
+.user {
+    color: var(--gray-blue);
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 4rem 2rem 1rem;
+}
+
+.user>span {
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1px lightgray;
+    padding: 2rem;
+}
+
+.stats>*:nth-child(2) {
+    margin: 0 2rem;
+}
+
+.stats>* {
+    color: var(--dark-gray);
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.stats>*>span {
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        background-position: top -750px left -700px, bottom -700px right -650px;
+    }
+  }
